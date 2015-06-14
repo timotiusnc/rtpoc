@@ -1,0 +1,12 @@
+<div id="queue-layout" class="row">
+  <div ng-show="isTweetLoading">
+    Loading queue(s)...
+  </div>
+  <ul class="collection">
+    <li
+      class="collection-item avatar"
+      ng-repeat="tweet in tweets"
+      ds-tm-tweet model="tweet">
+    </li>
+  </ul>
+</div>

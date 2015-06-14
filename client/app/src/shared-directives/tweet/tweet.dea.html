@@ -1,0 +1,17 @@
+<img ng-src="{{model.user.profile_image_url_https}}" alt="" class="circle">
+
+<div class="title">{{model.user.screen_name}}</div>
+<small>{{model.created_at}}</small>
+<p>{{model.text}}</p>
+
+<a href="#!" class="secondary-content" ng-show="model.answered">
+  <i class="mdi-navigation-check"></i>
+</a>
+
+<a class="waves-effect waves-light btn" ng-click="makeAnswered(model)" ng-show="!model.answered">
+  Answer
+</a>
+
+<a class="waves-effect waves-light btn" ng-click="makeUnanswered(model)" ng-show="model.answered">
+  Un-answer
+</a>

@@ -5,5 +5,6 @@ angular.module('dsTmApp.components', [
   'angular.filter',
   'infinite-scroll',
   'dsTmApp.i18n',
-  'ngResource'
+  'ngResource',
+  'firebase'
 ]);

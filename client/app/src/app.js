@@ -14,5 +14,9 @@ angular
     'ngCookies',
     'infinite-scroll'
   ])
+  .constant('TM_REF', {
+    'TWEETS': 'https://dazzling-fire-5123.firebaseio.com/tweets',
+    'MESSAGES': 'https://dazzling-fire-5123.firebaseio.com/messages',
+  })
   .run(function() {
   });
