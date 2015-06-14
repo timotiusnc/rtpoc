@@ -1,0 +1,17 @@
+@function emCalc($pxWidth)
+  @return $pxWidth / $body-font-size * 1em
+
+@mixin limit-line($line-count, $font-size, $line-height)
+  display: block
+  width: 100%
+  height: $font-size * $line-height * $line-count
+  font-size: emCalc($font-size)
+  line-height: $line-height
+  overflow: hidden
+  
+@mixin layout-stretch()
+  position: absolute
+  left: 0
+  right: 0
+  top: 0
+  bottom: 0
