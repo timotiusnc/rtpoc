@@ -4,8 +4,8 @@
 <small>{{model.created_at}}</small>
 <p>{{model.text}}</p>
 
-<small ng-show="{{showCtrl}}">Responded by: {{model.response.name}}</small><br/>
-<small ng-show="{{showCtrl}}">Response: {{model.response.message}}</small>
+<div><small ng-show="{{showCtrl}}">Responded by: {{model.response.name}}</small></div>
+<div><small ng-show="{{showCtrl}}">Response: {{model.response.message}}</small></div>
 
 <a class="waves-effect waves-light btn" ng-click="makeAnswered(model)" ng-show="!isBeingAnswered() && !isAnswered() && {{showCtrl}}">
   Answer
