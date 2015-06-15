@@ -2,7 +2,7 @@
 // endbower
 
 //Variables and necessary SASS components
-@import "variables"
+//@import "variables"
 @import "media-query"
 
 //Mixins
@@ -10,7 +10,9 @@
 @import "mixins/bootstrap-mixins"
 
 // injector
-@import "../src/layouts/queue/_queue.layout.sass"
+@import "../src/shared-directives/queue/_queue.dea.sass"
+@import "../src/shared-directives/tweet/_tweet.dea.sass"
+@import "../src/layouts/workspace/_workspace.layout.sass"
 // endinjector
 
 .browsehappy
@@ -19,47 +21,10 @@
   color: #000
   padding: 0.2em 0 
 
-body
-  font-family: $global-font
-  color: #545454
-  font-size: $body-font-size
-
-.nav a, .pagination, .carousel, .panel-title a, ul a, a   
-  cursor: pointer
-
-// template
 nav ul a, nav .brand-logo
   color: #444
 
-p
-  line-height: 2rem
-
-.button-collapse
-  color: #26a69a
-
-.parallax-container
-  min-height: 380px
-  line-height: 0
-  height: auto
-  color: rgba(255,255,255,.9)
-
-.parallax-container .section
-	width: 100%
-
-@media only screen and (max-width : 992px)
-  .parallax-container .section
-    position: absolute
-    top: 40%
-  #index-banner .section
-    top: 10%
-
-@media only screen and (max-width : 600px)
-  #index-banner .section
-    top: 0
-
-
-.icon-block
-  padding: 0 15px
-
-footer.page-footer
-  margin: 0
+//#main-container
+//  padding-left: 240px
+//  @media (max-width: 992px)
+//    padding-left: 0

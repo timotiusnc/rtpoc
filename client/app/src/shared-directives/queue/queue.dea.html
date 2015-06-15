@@ -1,0 +1,12 @@
+<ul class="col s12 collection">
+  <li
+    class="collection-item"
+    ng-show="isTweetLoading">
+    Loading queue(s)...
+  </li>
+  <li
+    class="collection-item avatar"
+    ng-repeat="tweet in tweets"
+    ds-tm-tweet model="tweet" show-ctrl="true">
+  </li>
+</ul>

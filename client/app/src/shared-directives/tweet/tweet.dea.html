@@ -4,14 +4,17 @@
 <small>{{model.created_at}}</small>
 <p>{{model.text}}</p>
 
-<a href="#!" class="secondary-content" ng-show="model.answered">
-  <i class="mdi-navigation-check"></i>
-</a>
+<small ng-show="{{showCtrl}}">Responded by: {{model.response.name}}</small><br/>
+<small ng-show="{{showCtrl}}">Response: {{model.response.message}}</small>
 
-<a class="waves-effect waves-light btn" ng-click="makeAnswered(model)" ng-show="!model.answered">
+<a class="waves-effect waves-light btn" ng-click="makeAnswered(model)" ng-show="!isBeingAnswered() && !isAnswered() && {{showCtrl}}">
   Answer
 </a>
 
-<a class="waves-effect waves-light btn" ng-click="makeUnanswered(model)" ng-show="model.answered">
+<a class="waves-effect waves-light btn disabled" ng-show="isBeingAnswered() && {{showCtrl}}">
+  In progress
+</a>
+
+<a class="waves-effect waves-light btn" ng-click="makeUnanswered(model)" ng-show="isAnswered() && {{showCtrl}}">
   Un-answer
 </a>

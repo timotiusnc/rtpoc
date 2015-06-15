@@ -9,7 +9,7 @@ angular
   })
   .config(function ($stateProvider, $urlRouterProvider, TM_stateConst) {
     $urlRouterProvider
-      .when('/', '/queue')
+      .when('/', '/workspace')
       .otherwise('/');
 
     // Now set up the states
@@ -23,10 +23,5 @@ angular
         url: '^/workspace',
         templateUrl: 'src/layouts/workspace/workspace.layout.html',
         controller: 'WorkspaceLayout'
-      })
-      .state(TM_stateConst.QUEUE, {
-        url: '^/queue',
-        templateUrl: 'src/layouts/queue/queue.layout.html',
-        controller: 'QueueLayout'
       });
   });

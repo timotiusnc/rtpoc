@@ -1,10 +1,32 @@
 <div class="row">
-  <h4 class="col s12 header">Workspace</h4>
-  <div class="col s12 input-field">
-    <input placeholder="Your name" type="text" id="name">
-    <label for="name">
+  <div class="col s4 row">
+    <ds-tm-queue></ds-tm-queue>
   </div>
 
-  <h4 class="col s12 header">Your current mention</h4>
-  
+  <div class="workspace col s8 row">
+    <div class="col s12 center-align" ng-show="isTweetLoading">
+      Retrieving task...<br/>
+      As soon as there is new unhandled-mention, it will be shown here.
+    </div>
+
+    <div class="col s12" ng-show="!isTweetLoading">
+      <div class="col s12" ds-tm-tweet model="tweet" show-ctrl="false"></div>
+
+      <div class="col s12 input-field">
+        <input id="name" type="text" ng-model="response.name">
+        <label for="name">Your Name</label>
+      </div>
+
+      <div class="col s12 input-field">
+        <input id="response" type="text" ng-model="response.message">
+        <label for="response">Your Response</label>
+      </div>
+
+      <div class="col s12 right-align">
+        <a class="waves-effect waves-light btn" ng-click="answerTweet()">
+          Answer
+        </a>
+      </div>
+    </div>
+  </div>
 </div>
